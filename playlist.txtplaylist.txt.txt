@@ -1,0 +1,5 @@
+Playlist: playlist.txt
+Title: Hi
+Artist nameNahom
+Genre TypePop
+

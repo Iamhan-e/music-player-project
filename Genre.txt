@@ -1,0 +1,14 @@
+Genre:Rock;A genre characterized by strong rhythm and electric guitars
+Song:Bohemian Rhapsody;Queen;Rock
+Song:Hotel California;Eagles;Rock
+Artist:Queen
+Artist:Eagles
+Album:Greatest Hits
+Album:Hotel California
+---
+Genre:Pop;A genre characterized by catchy melodies and widespread appeal
+Song:Thriller;Michael Jackson;Pop
+Artist:Michael Jackson
+Album:Thriller
+---
+Genre:Pop;Description: A genre Number of Songs: 2 Average Rating: 3.3
