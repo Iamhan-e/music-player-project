@@ -712,12 +712,16 @@ public class MusicLibraryGUI {
         buttonPanel.add(favoriteButton);
 
         // Stop button functionality
-        stopButton.addActionListener(e -> {
-            currentAudioPlayer.stopSong(); // Stop playback
-            stopButton.
-                    setEnabled(false);
-            playButton.setEnabled(true);
-        });
+       stopButton.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+
+                   currentAudioPlayer.pauseSong(); // Stop playback
+                   stopButton.setEnabled(false);
+                   playButton.setEnabled(true);
+
+           }
+       });
 //
         // Add a button for "Add to Playlist"
 
