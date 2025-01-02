@@ -642,16 +642,25 @@ public class MusicLibraryGUI {
         // Panel for buttons (horizontal layout)
         JPanel buttonPanel = new JPanel();
 
+
         JButton playButton = new JButton();
-        playButton.setIcon(new ImageIcon("C:\\Users\\Admin\\Desktop\\Harmony OOP  Final version\\src\\assets\\play.png"));
+
+        playButton.setIcon(new ImageIcon("C:\\Users\\Admin\\Desktop\\Harmony OOP  Final version\\src\\assets\\playBtn.png"));
         playButton.setPreferredSize(new Dimension(40, 55) );
         playButton.setBorder(null);
-        playButton.setBackground(Color.green);
+        playButton.setBackground(null);
+        playButton.setContentAreaFilled(false);
         playButton.setForeground(Color.black);
 
-        JButton stopButton = new JButton("Stop");
-        stopButton.setBackground(new Color(130, 92, 98));
-        stopButton.setForeground(Color.WHITE);
+
+        JButton stopButton = new JButton();
+        stopButton.setIcon(new ImageIcon("C:\\Users\\Admin\\Desktop\\Harmony OOP  Final version\\src\\assets\\pauseBtn.png"));
+        stopButton.setPreferredSize(new Dimension(40, 55) );
+        stopButton.setBorder(null);
+       stopButton.setBackground(null);
+        stopButton.setContentAreaFilled(false);
+        stopButton.setForeground(Color.black);
+
         stopButton.setEnabled(false); // Initially disabled until playback starts
 //
         JButton viewPlaylistButton = new JButton("View Playlist");
