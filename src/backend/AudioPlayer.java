@@ -2,12 +2,15 @@ package backend;
 
 import javazoom.jl.player.Player;
 
+import javazoom.jl.player.advanced.AdvancedPlayer;
+import javazoom.jl.player.advanced.PlaybackEvent;
+import javazoom.jl.player.advanced.PlaybackListener;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 
 public class AudioPlayer {
-    private Player player;
+    private AdvancedPlayer advancedPlayer;
     public long getPlaybackPosition() {
         long mediaPlayer = 0;
         return mediaPlayer != 0 ? mediaPlayer / 1000 : 0;
@@ -18,10 +21,10 @@ public class AudioPlayer {
         try {
             FileInputStream fis = new FileInputStream(file);
             BufferedInputStream bis = new BufferedInputStream(fis);
-            player = new Player(bis);
+            advancedPlayer = new AdvancedPlayer(bis);
             new Thread(() -> {
                 try {
-                    player.play();
+                    advancedPlayer.play();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -33,8 +36,8 @@ public class AudioPlayer {
 //
 
     public void stopSong() {
-        if (player != null) {
-            player.close();
+        if (advancedPlayer != null) {
+            advancedPlayer.close();
         }
 
     }
