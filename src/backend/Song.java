@@ -1,5 +1,7 @@
 package backend;
 
+import com.mpatric.mp3agic.Mp3File;
+
 import java.io.File;
 
 public class Song {
@@ -8,6 +10,7 @@ public class Song {
     private String genre;
     private File file;
     private  File albumCover; // Path to the album cover image
+
 
 
     public Song(String title, String artist, String genre, File file, File albumCover) {
@@ -69,4 +72,6 @@ public class Song {
 
     public void setAlbumCover(File file) {
     }
+
+
 }

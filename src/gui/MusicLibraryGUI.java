@@ -603,17 +603,23 @@ public class MusicLibraryGUI {
     // Method to display song details and buttons
     private AudioPlayer currentAudioPlayer = null;
 
+    public AudioPlayer getCurrentAudioPlayer(){
+        return currentAudioPlayer;
+    }
     private void showSongDetails(Song song, JPanel detailsPanel) {
 
         detailsPanel.removeAll();
 
         // Stop the currently playing song before playing a new one
         if (currentAudioPlayer != null) {
-            currentAudioPlayer.stopSong();
+
+            currentAudioPlayer.pauseSong();
+            System.out.println("Stopping current song...");
+
         }
 
         // Create a new AudioPlayer instance for the selected song
-        currentAudioPlayer = new AudioPlayer();
+        currentAudioPlayer = new AudioPlayer(this);
 
         // Panel for song information (horizontal layout)
         JPanel infoPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
@@ -755,7 +761,7 @@ public class MusicLibraryGUI {
         stopButton.addActionListener(e -> {
             timer.stop();
             progressBar.setValue(0);
-            currentAudioPlayer.stopSong();
+            currentAudioPlayer.pauseSong();
         });
 
 // Add the progress bar to the details panel
